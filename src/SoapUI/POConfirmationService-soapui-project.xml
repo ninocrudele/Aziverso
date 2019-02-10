@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1c2e4d35-66c8-45e9-a3c2-f2c4e34ef10d" activeEnvironment="Default" name="POConfirmationService" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2ddeb03d-760c-4cf7-88e6-9652e52d7024" wsaVersion="NONE" name="BasicHttpBinding_ITwoWayAsync" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ITwoWayAsync" soapVersion="1_1" anonymous="optional" definition="http://lab201601/POConfirmationService/POConfirmationService.svc?singleWsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://lab201601/POConfirmationService/POConfirmationService.svc?singleWsdl"><con:part><con:url>http://lab201601/POConfirmationService/POConfirmationService.svc?singleWsdl</con:url><con:content><![CDATA[<wsdl:definitions name="BizTalkServiceInstance" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <CreationInfo Created="2017-06-03 17:05:18Z"/>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Message" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/Message">
+      <xs:complexType name="MessageBody">
+        <xs:sequence>
+          <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://tempuri.org/Imports" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/Imports">
+      <xs:import namespace="http://contoso.org/samples/Fragments"/>
+      <xs:import namespace="http://contoso.org/samples"/>
+      <xs:import namespace="http://BizTalk.EDI.Order.Demo.POConfirmation"/>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://contoso.org/samples/Fragments" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:tns="http://contoso.org/samples/Fragments">
+      <xs:element name="OrderHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="BillingAddress">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Name" type="xs:string"/>
+                  <xs:element name="Street1" type="xs:string"/>
+                  <xs:element name="Street2" type="xs:anyType"/>
+                  <xs:element name="City" type="xs:string"/>
+                  <xs:element name="ZIP" type="xs:unsignedByte"/>
+                  <xs:element name="State" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ShippingAddress">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Name" type="xs:string"/>
+                  <xs:element name="Street1" type="xs:string"/>
+                  <xs:element name="Street2" type="xs:anyType"/>
+                  <xs:element name="City" type="xs:string"/>
+                  <xs:element name="ZIP" type="xs:unsignedByte"/>
+                  <xs:element name="State" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="OrderID" type="xs:string"/>
+            <xs:element name="CustomerID" type="xs:string"/>
+            <xs:element name="Date" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Item">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SKU" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>
+            <xs:element name="Price" type="xs:decimal"/>
+            <xs:element name="Quantity" type="xs:unsignedByte"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://contoso.org/samples" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns1="http://contoso.org/samples/Fragments" xmlns:ns0="http://contoso.org/samples">
+      <xs:import namespace="http://contoso.org/samples/Fragments"/>
+      <xs:annotation>
+        <xs:appinfo>
+          <references xmlns="http://schemas.microsoft.com/BizTalk/2003">
+            <reference targetNamespace="http://contoso.org/samples/Fragments"/>
+          </references>
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:element name="OrderMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns1:OrderHeader"/>
+            <xs:element name="Items">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ns1:Item"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TotalPrice" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="http://BizTalk.EDI.Order.Demo.POConfirmation" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://BizTalk.EDI.Order.Demo.POConfirmation" xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+      <xs:element name="PO">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PONum" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="POConfirmationService_POOperation_InputMessage">
+    <wsdl:part name="part" element="q1:OrderMessage" xmlns:q1="http://contoso.org/samples"/>
+  </wsdl:message>
+  <wsdl:message name="POConfirmationService_POOperation_OutputMessage">
+    <wsdl:part name="part" element="q2:PO" xmlns:q2="http://BizTalk.EDI.Order.Demo.POConfirmation"/>
+  </wsdl:message>
+  <wsdl:portType name="POConfirmationService">
+    <wsdl:documentation/>
+    <wsdl:operation name="POOperation">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:POConfirmationService_POOperation_InputMessage"/>
+      <wsdl:output message="tns:POConfirmationService_POOperation_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITwoWayAsync" type="tns:POConfirmationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="POOperation">
+      <wsdl:documentation/>
+      <soap:operation soapAction="POOperation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BizTalkServiceInstance">
+    <wsdl:port name="BasicHttpBinding_ITwoWayAsync" binding="tns:BasicHttpBinding_ITwoWayAsync">
+      <soap:address location="http://lab201601/POConfirmationService/POConfirmationService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://lab201601/POConfirmationService/POConfirmationService.svc</con:endpoint></con:endpoints><con:operation id="72fea015-fe51-4faa-a07b-5d637c2c618b" isOneWay="false" action="POOperation" name="POOperation" bindingOperationName="POOperation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0d773852-bca0-4998-9ce5-ce639a0cb4d9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://lab201601/POConfirmationService/POConfirmationService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://contoso.org/samples" xmlns:frag="http://contoso.org/samples/Fragments">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+<ns0:OrderMessage xmlns:ns0="http://contoso.org/samples">
+  <ns1:OrderHeader xmlns:ns1="http://contoso.org/samples/Fragments">
+    <ns1:BillingAddress>
+      <ns1:Name>ns1:Name_0</ns1:Name>
+      <ns1:Street1>ns1:Street1_0</ns1:Street1>
+      <ns1:Street2 />
+      <ns1:City>ns1:City_0</ns1:City>
+      <ns1:ZIP>10</ns1:ZIP>
+      <ns1:State>ns1:State_0</ns1:State>
+    </ns1:BillingAddress>
+    <ns1:ShippingAddress>
+      <ns1:Name>ns1:Name_0</ns1:Name>
+      <ns1:Street1>ns1:Street1_0</ns1:Street1>
+      <ns1:Street2 />
+      <ns1:City>ns1:City_0</ns1:City>
+      <ns1:ZIP>10</ns1:ZIP>
+      <ns1:State>ns1:State_0</ns1:State>
+    </ns1:ShippingAddress>
+    <ns1:OrderID>ns1:OrderID_0</ns1:OrderID>
+    <ns1:CustomerID>ns1:CustomerID_0</ns1:CustomerID>
+    <ns1:Date>ns1:Date_0</ns1:Date>
+  </ns1:OrderHeader>
+  <ns0:Items>
+    <ns1:Item xmlns:ns1="http://contoso.org/samples/Fragments">
+      <ns1:SKU>ns1:SKU_0</ns1:SKU>
+      <ns1:Description>ns1:Description_0</ns1:Description>
+      <ns1:Price>10.4</ns1:Price>
+      <ns1:Quantity>125</ns1:Quantity>
+    </ns1:Item>
+  </ns0:Items>
+  <ns0:TotalPrice>10.4</ns0:TotalPrice>
+</ns0:OrderMessage>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="POOperation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

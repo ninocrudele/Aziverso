@@ -1,0 +1,1 @@
+C:\Users\ninoc\Documents\Visual Studio 2015\Projects\RedisLaboratory\RedisLaboratoryOnRamp\bin\Debug\RedisLaboratoryOnRamp.exe.config

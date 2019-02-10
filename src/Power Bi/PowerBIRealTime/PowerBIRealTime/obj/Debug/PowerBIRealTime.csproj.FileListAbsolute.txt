@@ -1,0 +1,36 @@
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe.config
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.pdb
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.csprojResolveAssemblyReference.cache
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.exe
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.pdb
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe.config
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\PowerBIRealTime.pdb
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\obj\Debug\PowerBIRealTime.exe
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\obj\Debug\PowerBIRealTime.pdb
+C:\Users\ninoc\Documents\MVP\Integrate 2017\PowerBIRealTime - Copy\PowerBIRealTime\obj\Debug\PowerBIRealTime.csprojResolveAssemblyReference.cache
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe.config
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.exe
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.pdb
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.exe
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\PowerBIRealTime.pdb
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Newtonsoft.Json.dll
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\bin\Debug\Newtonsoft.Json.xml
+C:\Integrate2017\Power Bi\PowerBIRealTime\PowerBIRealTime\obj\Debug\PowerBIRealTime.csprojResolveAssemblyReference.cache

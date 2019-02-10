@@ -1,0 +1,9 @@
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\bin\Debug\RestService.exe.config
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\obj\Debug\RestService.csprojResolveAssemblyReference.cache
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\bin\Debug\RestService.exe
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\bin\Debug\RestService.pdb
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\obj\Debug\RestService.exe
+C:\Users\Ninoc\Documents\Visual Studio 2013\Projects\RestService\RestService\obj\Debug\RestService.pdb
+C:\Users\nino.crudele\Documents\RestService\RestService\bin\Debug\RestService.exe.config
+C:\Users\nino.crudele\Documents\RestService\RestService\obj\Debug\RestService.exe
+C:\Users\nino.crudele\Documents\RestService\RestService\obj\Debug\RestService.pdb

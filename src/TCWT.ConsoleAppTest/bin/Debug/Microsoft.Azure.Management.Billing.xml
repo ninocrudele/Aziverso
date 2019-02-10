@@ -1,0 +1,1841 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Management.Billing</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Management.Billing.BillingManagementClient">
+            <summary>
+            Billing client provides access to billing resources for Azure
+            subscriptions.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.ApiVersion">
+            <summary>
+            Version of the API to be used with the client request. The current version
+            is 2018-03-01-preview.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.SubscriptionId">
+            <summary>
+            Azure Subscription ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running Operations.
+            Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is generated and
+            included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.EnrollmentAccounts">
+            <summary>
+            Gets the IEnrollmentAccountsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.BillingPeriods">
+            <summary>
+            Gets the IBillingPeriodsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.Invoices">
+            <summary>
+            Gets the IInvoicesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingManagementClient.Operations">
+            <summary>
+            Gets the IOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Uri,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Uri,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the BillingManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingManagementClient.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.BillingPeriodsOperations">
+            <summary>
+            BillingPeriodsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperations.#ctor(Microsoft.Azure.Management.Billing.BillingManagementClient)">
+            <summary>
+            Initializes a new instance of the BillingPeriodsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.BillingPeriodsOperations.Client">
+            <summary>
+            Gets a reference to the BillingManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperations.ListWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='filter'>
+            May be used to filter billing periods by billingPeriodEndDate. The filter
+            supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently
+            support 'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N billing
+            periods.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a named billing period.  This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            </summary>
+            <param name='billingPeriodName'>
+            The name of a BillingPeriod resource.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions">
+            <summary>
+            Extension methods for BillingPeriodsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.List(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='filter'>
+            May be used to filter billing periods by billingPeriodEndDate. The filter
+            supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently
+            support 'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N billing
+            periods.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='filter'>
+            May be used to filter billing periods by billingPeriodEndDate. The filter
+            supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently
+            support 'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N billing
+            periods.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.Get(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String)">
+            <summary>
+            Gets a named billing period.  This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='billingPeriodName'>
+            The name of a BillingPeriod resource.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a named billing period.  This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='billingPeriodName'>
+            The name of a BillingPeriod resource.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.ListNext(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.BillingPeriodsOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Billing.IBillingPeriodsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased directly
+            through the Azure web portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperations">
+            <summary>
+            EnrollmentAccountsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperations.#ctor(Microsoft.Azure.Management.Billing.BillingManagementClient)">
+            <summary>
+            Initializes a new instance of the EnrollmentAccountsOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperations.Client">
+            <summary>
+            Gets a reference to the BillingManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperations.ListWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the enrollment accounts the caller has access to.
+            </summary>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a enrollment account by name.
+            </summary>
+            <param name='name'>
+            Enrollment Account name.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperationsExtensions">
+            <summary>
+            Extension methods for EnrollmentAccountsOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperationsExtensions.List(Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations)">
+            <summary>
+            Lists the enrollment accounts the caller has access to.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperationsExtensions.ListAsync(Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations,System.Threading.CancellationToken)">
+            <summary>
+            Lists the enrollment accounts the caller has access to.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperationsExtensions.Get(Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations,System.String)">
+            <summary>
+            Gets a enrollment account by name.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='name'>
+            Enrollment Account name.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.EnrollmentAccountsOperationsExtensions.GetAsync(Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a enrollment account by name.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='name'>
+            Enrollment Account name.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.IBillingManagementClient">
+            <summary>
+            Billing client provides access to billing resources for Azure
+            subscriptions.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.ApiVersion">
+            <summary>
+            Version of the API to be used with the client request. The current
+            version is 2018-03-01-preview.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.SubscriptionId">
+            <summary>
+            Azure Subscription ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running
+            Operations. Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is generated
+            and included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.EnrollmentAccounts">
+            <summary>
+            Gets the IEnrollmentAccountsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.BillingPeriods">
+            <summary>
+            Gets the IBillingPeriodsOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.Invoices">
+            <summary>
+            Gets the IInvoicesOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.IBillingManagementClient.Operations">
+            <summary>
+            Gets the IOperations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.IBillingPeriodsOperations">
+            <summary>
+            BillingPeriodsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IBillingPeriodsOperations.ListWithHttpMessagesAsync(System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased
+            directly through the Azure web portal are not supported through
+            this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='filter'>
+            May be used to filter billing periods by billingPeriodEndDate. The
+            filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does
+            not currently support 'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial
+            result. If a previous response contains a nextLink element, the
+            value of the nextLink element will include a skiptoken parameter
+            that specifies a starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N
+            billing periods.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IBillingPeriodsOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a named billing period.  This is only supported for Azure
+            Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported
+            through this preview API.
+            </summary>
+            <param name='billingPeriodName'>
+            The name of a BillingPeriod resource.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IBillingPeriodsOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available billing periods for a subscription in reverse
+            chronological order. This is only supported for Azure Web-Direct
+            subscriptions. Other subscription types which were not purchased
+            directly through the Azure web portal are not supported through
+            this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=844490" />
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations">
+            <summary>
+            EnrollmentAccountsOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations.ListWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the enrollment accounts the caller has access to.
+            </summary>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IEnrollmentAccountsOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a enrollment account by name.
+            </summary>
+            <param name='name'>
+            Enrollment Account name.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.IInvoicesOperations">
+            <summary>
+            InvoicesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IInvoicesOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse
+            chronological order beginning with the most recent invoice. In
+            preview, invoices are available via this API only for invoice
+            periods which end December 1, 2016 or later.  This is only
+            supported for Azure Web-Direct subscriptions. Other subscription
+            types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='expand'>
+            May be used to expand the downloadUrl property within a list of
+            invoices. This enables download links to be generated for multiple
+            invoices at once. By default, downloadURLs are not included when
+            listing invoices.
+            </param>
+            <param name='filter'>
+            May be used to filter invoices by invoicePeriodEndDate. The filter
+            supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not
+            currently support 'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial
+            result. If a previous response contains a nextLink element, the
+            value of the nextLink element will include a skiptoken parameter
+            that specifies a starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N
+            invoices.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IInvoicesOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a named invoice resource. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only
+            supported for Azure Web-Direct subscriptions. Other subscription
+            types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            </summary>
+            <param name='invoiceName'>
+            The name of an invoice resource.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IInvoicesOperations.GetLatestWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the most recent invoice. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only
+            supported for Azure Web-Direct subscriptions. Other subscription
+            types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            </summary>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IInvoicesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse
+            chronological order beginning with the most recent invoice. In
+            preview, invoices are available via this API only for invoice
+            periods which end December 1, 2016 or later.  This is only
+            supported for Azure Web-Direct subscriptions. Other subscription
+            types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.InvoicesOperations">
+            <summary>
+            InvoicesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperations.#ctor(Microsoft.Azure.Management.Billing.BillingManagementClient)">
+            <summary>
+            Initializes a new instance of the InvoicesOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.InvoicesOperations.Client">
+            <summary>
+            Gets a reference to the BillingManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperations.ListWithHttpMessagesAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='expand'>
+            May be used to expand the downloadUrl property within a list of invoices.
+            This enables download links to be generated for multiple invoices at once.
+            By default, downloadURLs are not included when listing invoices.
+            </param>
+            <param name='filter'>
+            May be used to filter invoices by invoicePeriodEndDate. The filter supports
+            'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support
+            'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N invoices.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperations.GetWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a named invoice resource. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='invoiceName'>
+            The name of an invoice resource.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperations.GetLatestWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the most recent invoice. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions">
+            <summary>
+            Extension methods for InvoicesOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.List(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='expand'>
+            May be used to expand the downloadUrl property within a list of invoices.
+            This enables download links to be generated for multiple invoices at once.
+            By default, downloadURLs are not included when listing invoices.
+            </param>
+            <param name='filter'>
+            May be used to filter invoices by invoicePeriodEndDate. The filter supports
+            'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support
+            'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N invoices.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.ListAsync(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='expand'>
+            May be used to expand the downloadUrl property within a list of invoices.
+            This enables download links to be generated for multiple invoices at once.
+            By default, downloadURLs are not included when listing invoices.
+            </param>
+            <param name='filter'>
+            May be used to filter invoices by invoicePeriodEndDate. The filter supports
+            'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support
+            'ne', 'or', or 'not'.
+            </param>
+            <param name='skiptoken'>
+            Skiptoken is only used if a previous operation returned a partial result.
+            If a previous response contains a nextLink element, the value of the
+            nextLink element will include a skiptoken parameter that specifies a
+            starting point to use for subsequent calls.
+            </param>
+            <param name='top'>
+            May be used to limit the number of results to the most recent N invoices.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.Get(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String)">
+            <summary>
+            Gets a named invoice resource. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='invoiceName'>
+            The name of an invoice resource.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.GetAsync(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a named invoice resource. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='invoiceName'>
+            The name of an invoice resource.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.GetLatest(Microsoft.Azure.Management.Billing.IInvoicesOperations)">
+            <summary>
+            Gets the most recent invoice. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.GetLatestAsync(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.Threading.CancellationToken)">
+            <summary>
+            Gets the most recent invoice. When getting a single invoice, the
+            downloadUrl property is expanded automatically.  This is only supported for
+            Azure Web-Direct subscriptions. Other subscription types which were not
+            purchased directly through the Azure web portal are not supported through
+            this preview API.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.ListNext(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String)">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.InvoicesOperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Billing.IInvoicesOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists the available invoices for a subscription in reverse chronological
+            order beginning with the most recent invoice. In preview, invoices are
+            available via this API only for invoice periods which end December 1, 2016
+            or later.  This is only supported for Azure Web-Direct subscriptions. Other
+            subscription types which were not purchased directly through the Azure web
+            portal are not supported through this preview API.
+            <see href="https://go.microsoft.com/fwlink/?linkid=842057" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.IOperations">
+            <summary>
+            Operations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IOperations.ListWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.IOperations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.BillingPeriod">
+            <summary>
+            A billing period resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.BillingPeriod.#ctor">
+            <summary>
+            Initializes a new instance of the BillingPeriod class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.BillingPeriod.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the BillingPeriod class.
+            </summary>
+            <param name="id">Resource Id.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="billingPeriodStartDate">The start of the date range
+            covered by the billing period.</param>
+            <param name="billingPeriodEndDate">The end of the date range
+            covered by the billing period.</param>
+            <param name="invoiceIds">Array of invoice ids that associated
+            with.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.BillingPeriod.BillingPeriodStartDate">
+            <summary>
+            Gets the start of the date range covered by the billing period.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.BillingPeriod.BillingPeriodEndDate">
+            <summary>
+            Gets the end of the date range covered by the billing period.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.BillingPeriod.InvoiceIds">
+            <summary>
+            Gets array of invoice ids that associated with.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.DownloadUrl">
+            <summary>
+            A secure URL that can be used to download a PDF invoice until the URL
+            expires.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.DownloadUrl.#ctor">
+            <summary>
+            Initializes a new instance of the DownloadUrl class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.DownloadUrl.#ctor(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Initializes a new instance of the DownloadUrl class.
+            </summary>
+            <param name="expiryTime">The time in UTC at which this download URL
+            will expire.</param>
+            <param name="url">The URL to the PDF file.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.DownloadUrl.ExpiryTime">
+            <summary>
+            Gets the time in UTC at which this download URL will expire.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.DownloadUrl.Url">
+            <summary>
+            Gets the URL to the PDF file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.EnrollmentAccount">
+            <summary>
+            An enrollment account resource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.EnrollmentAccount.#ctor">
+            <summary>
+            Initializes a new instance of the EnrollmentAccount class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.EnrollmentAccount.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the EnrollmentAccount class.
+            </summary>
+            <param name="id">Resource Id.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="principalName">The account owner's principal
+            name.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.EnrollmentAccount.PrincipalName">
+            <summary>
+            Gets the account owner's principal name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.EnrollmentAccountListResult">
+            <summary>
+            Result of listing enrollment accounts.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.EnrollmentAccountListResult.#ctor">
+            <summary>
+            Initializes a new instance of the EnrollmentAccountListResult
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.EnrollmentAccountListResult.#ctor(System.Collections.Generic.IList{Microsoft.Azure.Management.Billing.Models.EnrollmentAccount},System.String)">
+            <summary>
+            Initializes a new instance of the EnrollmentAccountListResult
+            class.
+            </summary>
+            <param name="value">The list of enrollment accounts.</param>
+            <param name="nextLink">The link (url) to the next page of
+            results.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.EnrollmentAccountListResult.Value">
+            <summary>
+            Gets the list of enrollment accounts.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.EnrollmentAccountListResult.NextLink">
+            <summary>
+            Gets the link (url) to the next page of results.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.ErrorDetails">
+            <summary>
+            The details of the error.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorDetails.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorDetails.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+            <param name="code">Error code.</param>
+            <param name="message">Error message indicating why the operation
+            failed.</param>
+            <param name="target">The target of the particular error.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorDetails.Code">
+            <summary>
+            Gets error code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorDetails.Message">
+            <summary>
+            Gets error message indicating why the operation failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorDetails.Target">
+            <summary>
+            Gets the target of the particular error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.ErrorResponse">
+            <summary>
+            Error response indicates that the service is not able to process the
+            incoming request. The reason is provided in the error message.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorResponse class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorResponse.#ctor(Microsoft.Azure.Management.Billing.Models.ErrorDetails)">
+            <summary>
+            Initializes a new instance of the ErrorResponse class.
+            </summary>
+            <param name="error">The details of the error.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorResponse.Error">
+            <summary>
+            Gets or sets the details of the error.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            <summary>
+            Exception thrown for an invalid response with ErrorResponse
+            information.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.Request">
+            <summary>
+            Gets information about the associated HTTP request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.Response">
+            <summary>
+            Gets information about the associated HTTP response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.Body">
+            <summary>
+            Gets or sets the body object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorResponseException class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ErrorResponseException class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.ErrorResponseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ErrorResponseException class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">Inner exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.Invoice">
+            <summary>
+            An invoice resource can be used download a PDF version of an invoice.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Invoice.#ctor">
+            <summary>
+            Initializes a new instance of the Invoice class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Invoice.#ctor(System.String,System.String,System.String,Microsoft.Azure.Management.Billing.Models.DownloadUrl,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the Invoice class.
+            </summary>
+            <param name="id">Resource Id.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+            <param name="downloadUrl">A secure link to download the PDF version
+            of an invoice. The link will cease to work after its expiry time is
+            reached.</param>
+            <param name="invoicePeriodStartDate">The start of the date range
+            covered by the invoice.</param>
+            <param name="invoicePeriodEndDate">The end of the date range
+            covered by the invoice.</param>
+            <param name="billingPeriodIds">Array of billing perdiod ids that
+            the invoice is attributed to.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Invoice.DownloadUrl">
+            <summary>
+            Gets or sets a secure link to download the PDF version of an
+            invoice. The link will cease to work after its expiry time is
+            reached.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Invoice.InvoicePeriodStartDate">
+            <summary>
+            Gets the start of the date range covered by the invoice.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Invoice.InvoicePeriodEndDate">
+            <summary>
+            Gets the end of the date range covered by the invoice.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Invoice.BillingPeriodIds">
+            <summary>
+            Gets array of billing perdiod ids that the invoice is attributed
+            to.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.Operation">
+            <summary>
+            A Billing REST API operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Operation.#ctor">
+            <summary>
+            Initializes a new instance of the Operation class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Operation.#ctor(System.String,Microsoft.Azure.Management.Billing.Models.OperationDisplay)">
+            <summary>
+            Initializes a new instance of the Operation class.
+            </summary>
+            <param name="name">Operation name:
+            {provider}/{resource}/{operation}.</param>
+            <param name="display">The object that represents the
+            operation.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Operation.Name">
+            <summary>
+            Gets operation name: {provider}/{resource}/{operation}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Operation.Display">
+            <summary>
+            Gets or sets the object that represents the operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.OperationDisplay">
+            <summary>
+            The object that represents the operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.OperationDisplay.#ctor">
+            <summary>
+            Initializes a new instance of the OperationDisplay class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.OperationDisplay.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the OperationDisplay class.
+            </summary>
+            <param name="provider">Service provider: Microsoft.Billing.</param>
+            <param name="resource">Resource on which the operation is
+            performed: Invoice, etc.</param>
+            <param name="operation">Operation type: Read, write, delete,
+            etc.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.OperationDisplay.Provider">
+            <summary>
+            Gets service provider: Microsoft.Billing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.OperationDisplay.Resource">
+            <summary>
+            Gets resource on which the operation is performed: Invoice, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.OperationDisplay.Operation">
+            <summary>
+            Gets operation type: Read, write, delete, etc.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.Page`1">
+            <summary>
+            Defines a page in Azure responses.
+            </summary>
+            <typeparam name="T">Type of the page content items</typeparam>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Page`1.NextPageLink">
+            <summary>
+            Gets the link to the next page.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Page`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Page`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Models.Resource">
+            <summary>
+            The Resource model definition.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Resource.#ctor">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Models.Resource.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+            <param name="id">Resource Id.</param>
+            <param name="name">Resource name.</param>
+            <param name="type">Resource type.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Resource.Id">
+            <summary>
+            Gets resource Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Resource.Name">
+            <summary>
+            Gets resource name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Models.Resource.Type">
+            <summary>
+            Gets resource type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.Operations">
+            <summary>
+            Operations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Operations.#ctor(Microsoft.Azure.Management.Billing.BillingManagementClient)">
+            <summary>
+            Initializes a new instance of the Operations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Billing.Operations.Client">
+            <summary>
+            Gets a reference to the BillingManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Operations.ListWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.Operations.ListNextWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.Management.Billing.Models.ErrorResponseException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Billing.OperationsExtensions">
+            <summary>
+            Extension methods for Operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.OperationsExtensions.List(Microsoft.Azure.Management.Billing.IOperations)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.OperationsExtensions.ListAsync(Microsoft.Azure.Management.Billing.IOperations,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.OperationsExtensions.ListNext(Microsoft.Azure.Management.Billing.IOperations,System.String)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Billing.OperationsExtensions.ListNextAsync(Microsoft.Azure.Management.Billing.IOperations,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the available billing REST API operations.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='nextPageLink'>
+            The NextLink from the previous successful call to List operation.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+    </members>
+</doc>
