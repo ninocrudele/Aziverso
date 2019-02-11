@@ -20,4 +20,4 @@ Any type of collaboration is very appreciated.
 
 More information in the official website
 
-https://aziverso.com/
+https://aziverso.com
