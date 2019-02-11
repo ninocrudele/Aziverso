@@ -1,5 +1,5 @@
 # Aziverso
-This is the official gti repo of Aziverso.
+This is the official GitHub repo of Aziverso.
 
 Aziverso is a multiverse add-in for Microsoft Office able to offer many features to speed up the Azure professional work, it is free to use and supported by the community.
 Aziverso has been developed by Nino Crudele, he is 12 years Microsoft Azure MVP and he daily supports a large number of companies in Microsoft Azure.
@@ -15,4 +15,9 @@ Aziverso can query any API and provide an extensive result able to show a comple
 Combining the feature of heuristic view and the group we can extend our troubleshooting at the unthinkable level before.
 
 Feel free to add any issue you like to implement in the next version.
+
 Any type of collaboration is very appreciated.
+
+More information in the official website
+
+https://aziverso.com/
